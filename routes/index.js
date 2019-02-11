@@ -32,6 +32,26 @@ app.get('/logout', function(req, res){
     res.redirect('/adminlogin');
 });
 
+app.get('/edit/project',function(req,res){
+	res.render('adminproject');
+})
+
+app.post('/edit/project',function(req,res){
+
+})
+
+app.get('/edit/achive',function(req,res){
+	res.render('adminachive');
+})
+
+app.post('/edit/achive',function(req,res){
+
+})
+
+app.get('/edit/placement',function(req,res){
+	res.render('editplacement');
+})
+
 passport.use(new Strategy(
 	function(username, password, cb) {
 	  data.finduser(username, function(err, user) {
