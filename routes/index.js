@@ -37,7 +37,9 @@ app.get('/edit/project',function(req,res){
 })
 
 app.post('/edit/project',function(req,res){
-
+		var data=req.body;
+		console.log(data);
+		res.render('adminproject');
 })
 
 app.get('/edit/achive',function(req,res){
@@ -45,11 +47,35 @@ app.get('/edit/achive',function(req,res){
 })
 
 app.post('/edit/achive',function(req,res){
-
+	console.log(req.body);
+	res.render('adminachive');
 })
 
 app.get('/edit/placement',function(req,res){
 	res.render('editplacement');
+})
+
+app.post('/edit/placement',function(req,res){
+	console.log(req.body);
+	res.render('editplacement');
+})
+
+app.get('/edit/workshop',function(req,res){
+	res.render('editworkshop');
+})
+
+app.post('/edit/workshop',function(req,res){
+	console.log(req.body);
+	res.render('editworkshop');
+})
+
+app.get('/edit/student',function(req,res){
+	res.render('editstudent');
+})
+
+app.post('/edit/student',function(req,res){
+	console.log(req.body);
+	res.render('editstudent');
 })
 
 passport.use(new Strategy(
