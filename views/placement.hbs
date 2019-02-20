@@ -1,0 +1,13 @@
+<h1>
+    placement
+</h1>
+{{#if data}}
+    {{#each data}}
+        <div class="projectback">  
+            <h1 class="projectfont">{{this.company}}</h1><br>
+            {{this.name}}<br>
+            {{this.package}}<br>
+            {{this.type}}<br>            
+        </div>
+    {{/each}}
+{{/if}}

@@ -1,0 +1,15 @@
+{{#if data}}
+    {{#each data}}
+        <div class="projectback">  
+            <h1 class="projectfont">{{this.contest}}</h1><br>
+            {{this.project}}<br>
+            {{#each this.student}}
+                {{this}}<br>
+            {{/each}}
+            {{this.domain}}<br>
+            {{this.level}}<br>
+            {{this.mentor}}
+            
+        </div>
+    {{/each}}
+{{/if}}
