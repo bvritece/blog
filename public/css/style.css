@@ -104,3 +104,41 @@ body {
   background-color:#ccc;
   padding: 12px 20px;
 }
+
+.main{
+  background-image: url("pic.jpg");
+  height: 400px;
+}
+
+.head{
+  
+  text-align: center;
+  color:whitesmoke;
+  font-family: 'Anton', sans-serif;
+  font-size: 70px;
+}
+
+.customnav{
+  background-image: url(nav.jpg);
+  width: 800px;
+  right: 45px;
+  
+}
+
+.font{
+  color: black;
+  font-family: 'Gloria Hallelujah', cursive;
+  font-size: 15px;
+}
+
+.projectback{
+  background-color: white;
+  
+}
+.projectfont{
+  color: black;
+  font-family:'Bitter', serif;
+}
+.domain{
+  font-family: 'Signika', sans-serif;
+}

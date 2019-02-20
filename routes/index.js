@@ -4,6 +4,7 @@ var fs=require('fs');
 var passport = require('passport');
 var Strategy = require('passport-local').Strategy;
 var data=require('./data');
+var db=require('./db');
 
 app.get('/adminlogin',function(req,res){
     res.render('adminlogin');
@@ -37,8 +38,7 @@ app.get('/edit/project',function(req,res){
 })
 
 app.post('/edit/project',function(req,res){
-		var data=req.body;
-		console.log(data);
+		db.projectpush(req.body);
 		res.render('adminproject');
 })
 
@@ -47,7 +47,7 @@ app.get('/edit/achive',function(req,res){
 })
 
 app.post('/edit/achive',function(req,res){
-	console.log(req.body);
+	db.achivepush(req.body);
 	res.render('adminachive');
 })
 
@@ -57,6 +57,7 @@ app.get('/edit/placement',function(req,res){
 
 app.post('/edit/placement',function(req,res){
 	console.log(req.body);
+	db.placementpush(req.body);
 	res.render('editplacement');
 })
 
@@ -65,7 +66,7 @@ app.get('/edit/workshop',function(req,res){
 })
 
 app.post('/edit/workshop',function(req,res){
-	console.log(req.body);
+	db.workshoppush(req.body);
 	res.render('editworkshop');
 })
 
@@ -74,9 +75,74 @@ app.get('/edit/student',function(req,res){
 })
 
 app.post('/edit/student',function(req,res){
-	console.log(req.body);
+	db.studentpush(req.body);
 	res.render('editstudent');
 })
+
+app.get('/projects',function(req,res){
+	db.getproject(function(err,docs){
+		if(err){
+			console.log(err);
+		}
+		else{
+			console.log(docs);
+			res.render('project',{data:docs});		
+		}
+	})
+	
+})
+
+app.get('/achive',function(req,res){
+	db.getachive(function(err,docs){
+		if(err){
+			console.log(err);
+		}
+		else{
+			console.log(docs);
+			res.render('achive',{data:docs});
+		}
+	})
+})
+
+
+app.get('/workshop',function(req,res){
+	db.getworkshop(function(err,docs){
+		if(err){
+			console.log(err);
+		}
+		else{
+			console.log(docs);
+			res.render('workshop',{data:docs});
+		}
+	})
+	
+})
+
+app.get('/student',function(req,res){
+	db.getstudent(function(err,docs){
+		if(err){
+			console.log(err);
+		}
+		else{
+			console.log(docs);
+			res.render('student',{data:docs});
+		}
+	})
+	
+})
+
+app.get('/placement',function(req,res){
+	db.getplacement(function(err,docs){
+		if(err){
+			console.log(err);
+		}
+		else{
+			console.log(docs);
+			res.render('placement',{data:docs});
+		}
+	})
+	})
+
 
 passport.use(new Strategy(
 	function(username, password, cb) {

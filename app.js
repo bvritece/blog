@@ -6,6 +6,12 @@ var session = require('express-session');
 var passport = require('passport');
 var flash = require('connect-flash');
 
+var mongo = require('mongodb');
+var mongoose = require('mongoose');
+
+mongoose.connect('mongodb://localhost/blog');
+var db = mongoose.connection;
+
 var app= express();
 
 
@@ -45,5 +51,7 @@ app.use(function (req, res, next) {
 });
 
 
+
+
 app.use('/', routes);
-app.listen(5000, () => console.log(`Listening on 5000`));
+app.listen(8000, () => console.log(`Listening on 8000`));

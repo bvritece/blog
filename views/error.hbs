@@ -3,7 +3,7 @@
     <head>
         	<link rel="stylesheet" href="/css/bootstrap.css" />
 	<link rel="stylesheet" href="/css/style.css" />
-    <script src="/js/a.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Anton|Gloria+Hallelujah|Bitter|Signika" rel="stylesheet">   <script src="/js/a.js"></script>
 
     </head>
 <body>
@@ -11,21 +11,38 @@
 	<div class="container">
       <div class="header clearfix">
         <nav>
-          <ul class="nav nav-pills pull-right">
+          
             {{#if user}}
-              <li role="presentation"><a href="/edit">Home</a></li>
-              <li role="presentation"><a href="/edit/project">Projects</a></li>
-              <li role="presentation"><a href="/edit/achive">Achivements</a></li>
-              <li role="presentation"><a href="/edit/workshop">Workshop</a></li>
-              <li role="presentation"><a href="/edit/student">Studentlist</a></li>
-              <li role="presentation"><a href="/edit/placement">placementlist</a></li>
-              <li role="presentation"><a href="/logout">Logout</a></li>
-
+            <ul class="nav nav-pills pull-right">
+              <li ><a href="/edit">Home</a></li>
+              <li ><a href="/edit/project">Projects</a></li>
+              <li ><a href="/edit/achive">Achivements</a></li>
+              <li ><a href="/edit/workshop">Workshop</a></li>
+              <li ><a href="/edit/student">Studentlist</a></li>
+              <li ><a href="/edit/placement">placementlist</a></li>
+              <li ><a href="/logout">Logout</a></li>
+            </ul>
             {{else}}
-              <li role="presentation"><a href="/adminlogin">Admin Login</a></li>
+               <nav class="navbar customnav">
+  <div class="container-fluid ">
+
+    <ul class="nav navbar-nav ">
+      <li ><a href="/" class="font">Home</a></li>
+      <li ><a href="/projects" class="font">Projects</a></li>
+      <li><a href="/achive" class="font">Achivements</a></li>
+      <li><a href="/workshop" class="font">Workshops</a></li>
+      <li><a href="/student" class="font">Students</a></li>
+      <li><a href="/placement" class="font">Placements</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="/adminlogin" class="font"> Admin Login</a></li>
+      
+    </ul>
+  </div>
+</nav> 
               
             {{/if}}
-          </ul>
+          
         </nav>
 
       </div>
