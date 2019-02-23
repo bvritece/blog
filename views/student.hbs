@@ -1,10 +1,68 @@
-{{#if data}}
-    {{#each data}}
-        <div class="projectback">  
-            <h1 class="projectfont">{{this.name}}</h1><br>
-            {{this.year}}<br>
-            {{this.number}}<br>
+<div >
+{{#if data4}}
+    <table align="center" class="textfont">
+        <h4 class="sidefont">IV Year Students</h4>
+        <tr>
+            <th style="width:50px">S.No</th>
+            <th style="width:300px">Student Name</th>
+            <th style="width:300px">Roll Number</th>
+        </tr>
+        {{#each data4}}
+            <tr>
+                <td></td>
+                <td>{{this.name}}</td>
+                <td>{{this.number}}</td>
+            </tr>
             
         </div>
     {{/each}}
+    </table>
+    
 {{/if}}
+</div>
+<br>
+<div>
+{{#if data3}}
+    <table align="center" class="textfont"> 
+        <h4 class="sidefont">III Year Students</h4>
+        <tr>
+            <th style="width:50px">S.No</th>
+            <th style="width:300px">Student Name</th>
+            <th style="width:300px">Roll Number</th>
+        </tr>
+        {{#each data3}}
+            <tr>
+                <td></td>
+                <td>{{this.name}}</td>
+                <td>{{this.number}}</td>
+            </tr>
+            
+        </div>
+    {{/each}}
+    </table>
+    
+{{/if}}
+</div>
+<br>
+<div>
+{{#if data2}}
+    <table align="center" class="textfont"> 
+        <h4 class="sidefont">II Year Students</h4>
+        <tr>
+            <th style="width:50px">S.No</th>
+            <th style="width:300px">Student Name</th>
+            <th style="width:300px">Roll Number</th>
+        </tr>
+        {{#each data2}}
+            <tr>
+                <td></td>
+                <td>{{this.name}}</td>
+                <td>{{this.number}}</td>
+            </tr>
+            
+        </div>
+    {{/each}}
+    </table>
+    
+{{/if}}
+</div>

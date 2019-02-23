@@ -1,13 +1,49 @@
-<h1>
-    placement
-</h1>
-{{#if data}}
-    {{#each data}}
-        <div class="projectback">  
-            <h1 class="projectfont">{{this.company}}</h1><br>
-            {{this.name}}<br>
-            {{this.package}}<br>
-            {{this.type}}<br>            
+<div>
+{{#if place}}
+    <table align="center" class="textfont"> 
+        <h4 class="sidefont">Placement Details</h4>
+        <tr>
+            <th style="width:50px">S.No</th>
+            <th style="width:300px">Student Name</th>
+            <th style="width:300px">Company</th>
+            <th style="width:300px">Package</th>
+            
+        </tr>
+        {{#each place}}
+            <tr>
+                <td></td>
+                <td>{{this.name}}</td>
+                <td>{{this.company}}</td>
+                <td>{{this.package}} LPA</td>
+            </tr>
+            
         </div>
     {{/each}}
+    </table>
 {{/if}}
+</div>
+<br>
+<div>
+{{#if intern}}
+    <table align="center" class="textfont"> 
+        <h4 class="sidefont">Intership Details</h4>
+        <tr>
+            <th style="width:50px">S.No</th>
+            <th style="width:300px">Student Name</th>
+            <th style="width:300px">Company</th>
+            <th style="width:300px">Package</th>
+            
+        </tr>
+        {{#each intern}}
+            <tr>
+                <td></td>
+                <td>{{this.name}}</td>
+                <td>{{this.company}}</td>
+                <td>{{this.package}} per month</td>
+            </tr>
+            
+        </div>
+    {{/each}}
+    </table>
+{{/if}}
+</div>

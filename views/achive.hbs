@@ -1,14 +1,22 @@
 {{#if data}}
     {{#each data}}
         <div class="projectback">  
-            <h1 class="projectfont">{{this.contest}}</h1><br>
-            {{this.project}}<br>
+            <h4 class="sidefont">Contest Name : {{this.contest}}</h4> 
+            <h4 class="sidefont">Project Name : {{this.project}}</h4> 
+            <h4 class="sidefont">Domain : {{this.domain}}</h4> 
+            <h4 class="sidefont">Level : {{this.level}}</h4> 
+            
+            <h4 class="sidefont">students:
+            
             {{#each this.student}}
-                {{this}}<br>
+                {{this}},
             {{/each}}
-            {{this.domain}}<br>
-            {{this.level}}<br>
-            {{this.mentor}}
+            </h4>
+
+            <h4 class="sidefont">Mentor: {{this.mentor}}</h4> 
+            <br>
+            {{{this.link}}}
+            
             
         </div>
     {{/each}}

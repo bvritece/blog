@@ -85,7 +85,6 @@ app.get('/projects',function(req,res){
 			console.log(err);
 		}
 		else{
-			console.log(docs);
 			res.render('project',{data:docs});		
 		}
 	})
@@ -124,8 +123,20 @@ app.get('/student',function(req,res){
 			console.log(err);
 		}
 		else{
-			console.log(docs);
-			res.render('student',{data:docs});
+			var year4=[],year3=[],year2=[];
+			for(var i=0;i<docs.length;i++){
+				if(docs[i].year=="IV"){
+					year4.push(docs[i]);
+				}
+				if(docs[i].year=="III"){
+					year3.push(docs[i]);
+				}
+				if(docs[i].year=="II"){
+					year2.push(docs[i]);
+				}
+			}
+			
+			res.render('student',{data4:year4,data3:year3,data2:year2});
 		}
 	})
 	
@@ -137,8 +148,17 @@ app.get('/placement',function(req,res){
 			console.log(err);
 		}
 		else{
-			console.log(docs);
-			res.render('placement',{data:docs});
+			var intern=[];
+			var place=[];
+			for(var i=0;i<docs.length;i++){
+				if(docs[i].type=="job"){
+					place.push(docs[i]);
+				}
+				if(docs[i].type=="intern"){
+					intern.push(docs[i]);
+				}
+			}
+			res.render('placement',{place:place,intern:intern});
 		}
 	})
 	})

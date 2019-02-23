@@ -1,18 +1,16 @@
 <!DOCTYPE html>
 <html>
     <head>
-        	<link rel="stylesheet" href="/css/bootstrap.css" />
-	<link rel="stylesheet" href="/css/style.css" />
-  <link href="https://fonts.googleapis.com/css?family=Anton|Gloria+Hallelujah|Bitter|Signika" rel="stylesheet">   <script src="/js/a.js"></script>
+      <link rel="stylesheet" href="/css/bootstrap.css" />
+	    <link rel="stylesheet" href="/css/style.css" />
+      <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Anton|Gloria+Hallelujah|Bitter|Signika|Francois+One|Fredoka+One|ZCOOL+QingKe+HuangYou" rel="stylesheet">   <script src="/js/a.js"></script>
 
     </head>
-<body>
-
-	<div class="container">
+  <body>
+    <div class="container">
       <div class="header clearfix">
         <nav>
-          
-            {{#if user}}
+          {{#if user}}
             <ul class="nav nav-pills pull-right">
               <li ><a href="/edit">Home</a></li>
               <li ><a href="/edit/project">Projects</a></li>
@@ -22,57 +20,30 @@
               <li ><a href="/edit/placement">placementlist</a></li>
               <li ><a href="/logout">Logout</a></li>
             </ul>
-            {{else}}
-               <nav class="navbar customnav">
-  <div class="container-fluid ">
-
-    <ul class="nav navbar-nav ">
-      <li ><a href="/" class="font">Home</a></li>
-      <li ><a href="/projects" class="font">Projects</a></li>
-      <li><a href="/achive" class="font">Achivements</a></li>
-      <li><a href="/workshop" class="font">Workshops</a></li>
-      <li><a href="/student" class="font">Students</a></li>
-      <li><a href="/placement" class="font">Placements</a></li>
-    </ul>
-    <ul class="nav navbar-nav navbar-right">
-      <li><a href="/adminlogin" class="font"> Admin Login</a></li>
-      
-    </ul>
-  </div>
-</nav> 
+          {{else}}
+            <nav class="navbar customnav">
+              <div class="container-fluid ">
+                <ul class="nav navbar-nav ">
+                  <li ><a href="/" class="font">Home</a></li>
+                  <li ><a href="/projects" class="font">Projects</a></li>
+                  <li><a href="/achive" class="font">Achivements</a></li>
+                  <li><a href="/workshop" class="font">Workshops</a></li>
+                  <li><a href="/student" class="font">Students</a></li>
+                  <li><a href="/placement" class="font">Placements</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                  <li><a href="/adminlogin" class="font"> Admin Login</a></li>
               
-            {{/if}}
+                </ul>
+            
+              </div>
+            </nav> 
+              
+          {{/if}}
           
         </nav>
-
       </div>
-
-
-      <div class="row">
-        <div class="col-lg-12">
-          {{#if success_msg}}
-            <div class="alert alert-success">{{success_msg}}</div>
-          {{/if}}
-
-          {{#if error_msg}}
-            <div class="alert alert-danger">{{error_msg}}</div>
-          {{/if}}
-
-          {{#if error}}
-            <div class="alert alert-danger">{{error}}</div>
-          {{/if}}
-
-          {{{body}}}
-        </div>
-
-
-      </div>
-
-      <footer class="footer">
-        <p>&copy; tarun </p>
-      </footer>
-
-    </div> <!-- /container -->
-</body>
-
+      {{{body}}}
+    </div>
+  </body>
 </html>
